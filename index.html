@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrisSøk - Sammenlign priser på nett</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>🔍 PrisSøk</h1>
+            <p class="tagline">Sammenlign priser fra norske nettbutikker</p>
+        </header>
+
+        <!-- Søkeseksjon -->
+        <section class="search-section">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Søk etter produkt, f.eks. iPhone 15, PlayStation 5..." />
+                <button id="searchBtn">Søk</button>
+            </div>
+        </section>
+
+        <!-- Resultater -->
+        <section class="results-section" id="resultsSection" style="display: none;">
+            <h2>Prissammenligning</h2>
+            
+            <!-- Beste tilbud -->
+            <div class="best-deal" id="bestDeal"></div>
+
+            <!-- Pristabell -->
+            <div class="price-table">
+                <h3>Alle tilbud</h3>
+                <table id="priceTable">
+                    <thead>
+                        <tr>
+                            <th>Butikk</th>
+                            <th>Pris</th>
+                            <th>Leveringstid</th>
+                            <th>Handling</th>
+                        </tr>
+                    </thead>
+                    <tbody id="priceTableBody">
+                        <!-- Fylt dynamisk med JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Prishistorikk graf -->
+            <div class="price-history">
+                <h3>Prishistorikk - Siste 12 måneder</h3>
+                <canvas id="priceChart"></canvas>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2025 PrisSøk. Spar penger på nettkjøp.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
